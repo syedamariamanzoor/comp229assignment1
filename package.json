@@ -1,9 +1,13 @@
 {
   "name": "myportfolio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node server"
+  },
+  "engines": {
+    "node": "^14.18.0",
+    "npm": "^6.14.15"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -16,5 +20,18 @@
     "jquery": "^3.6.0",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
-  }
+  },
+  "description": "Comp229 Assignment 1",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedamariamanzoor/comp229assignment1.git"
+  },
+  "author": "Syeda Maria Manzoor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedamariamanzoor/comp229assignment1/issues"
+  },
+  "homepage": "https://github.com/syedamariamanzoor/comp229assignment1#readme"
 }
