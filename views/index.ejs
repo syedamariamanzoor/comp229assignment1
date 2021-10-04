@@ -1,3 +1,5 @@
+<!-- index.ejs; Syeda Maria Manzoor, 301184173, 03-Oct-2021-->
+
 <%- include partials/header.ejs %>
 <%- include partials/main-nav.ejs %>
 
@@ -5,8 +7,21 @@
 
     <main class="container">
       <div class=jumbotron>
-        <h1 class="display-4">  <p> Welcome to <%= title %>  </p></h1>
-
+        <% if(title=="Home") {%>
+          <%- include contents/home.ejs %>
+        <%}%>
+        <% if(title=="About") {%>
+          <%- include contents/about.ejs %>
+        <%}%>
+        <% if(title=="Projects") {%>
+          <%- include contents/projects.ejs %>
+        <%}%>
+          <% if(title=="Services") {%>
+        <%- include contents/services.ejs %>
+          <%}%> 
+        <% if(title=="Contact") {%>
+          <%- include contents/contact.ejs %>
+        <%}%>
       </div>
     </main>
 
