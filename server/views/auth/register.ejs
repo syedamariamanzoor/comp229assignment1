@@ -1,0 +1,73 @@
+<!-- register.ejs; Syeda Maria Manzoor, 301184173, 03-Oct-2021-->
+
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main-nav.ejs %>
+
+<main class="container">
+<% if (messages.length>0) { %>
+    <div class="alert alert-danger">
+        <%= messages %>
+    </div>
+  
+  <% } %>
+  <div class="card border-light mb-3">
+    <div class="p-2 card-body">
+        <div class="row g-0">
+          <div class="col-md-8">
+              <h5 class="display-8 mb-5">Please register</h5>
+              <p class="">Please register to view authenticated contents</p>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+  
+  <div class="card-group mb-5">
+    <div class="card border-light">
+      <div class="card-body">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <form method="post" autocomplete="off">
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">User name</label>
+                      <input type="text" class="form-control" id="loginid" name="username" placeholder="User name" required autofocus>
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                    </div>
+
+                      <div class="mb-3">
+                        <label for="" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                      </div>
+
+                    <div class="mb-3">
+                      <button class="btn btn-primary btn-sm " id="submit" type="submit">Register</button>
+                      <a  class="btn btn-warning btn-sm" href="/" > <i class="fa fa-times"></i> Cancel</a>
+                    </div>
+                </form>
+            </div>
+          </div>
+  
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-5 mb-5">
+    <hr class="p-3 mb-5">
+  
+  </div>
+</main>
+  
+  <%- include ../partials/bottom-nav.ejs %>
+  <%- include ../partials/footer.ejs %>
