@@ -5,7 +5,7 @@
  * <!-- server.ejs; Syeda Maria Manzoor, 301184173, 03-Oct-2021-->
  */
 
-var app = require('./app');
+var app = require('./server/config/app');
 var debug = require('debug')('myportfolio:server');
 var http = require('http');
 

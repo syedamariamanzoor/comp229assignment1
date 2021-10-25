@@ -1,0 +1,60 @@
+<!-- index.ejs; Syeda Maria Manzoor, 301184173, 03-Oct-2021-->
+
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main-nav.ejs %>
+
+
+
+    <main class="container">
+
+      <div class="card border-light mb-3">
+        <div class="p-5 card-body">
+            <div class="row g-0">
+              <div class="col-md-12">
+                  <h5 class="display-6 mb-3"> Business contact list </h5>
+                  
+              </div>
+              
+            </div>
+          
+        </div>
+      </div>
+
+     <div class="row">
+         <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th class="text-center">First name</th>
+                    <th class="text-center">Last name</th>
+                    <th class="text-center">Phone</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% for (let count = 0; count < BusinessContact.length; count++) { %>
+                        <tr>
+                          <td class="text-center"><%= BusinessContact[count].firstname %></td>
+                          <td class="text-center"><%= BusinessContact[count].lastname %></td>
+                          <td class="text-center"><%= BusinessContact[count].phone %></td>
+                          <td class="text-center"><%= BusinessContact[count].email %></td>
+                          <td class="text-center">
+                          <a type="button" href="/businesscontact/edit/<%= BusinessContact[count]._id%>" class="btn btn-primary btn-sm update" ><i class="fa fa-pen"></i> Edit</a>  
+                          <a type="button" href="/businesscontact/delete/<%= BusinessContact[count]._id%>" class="btn btn-danger btn-sm delete" ><i class="fa fa-trash"></i> Delete</a>  
+                          </td>
+
+                        </tr>
+                    <% } %>
+                </tbody>
+              </table>
+
+         </div>
+
+     </div>
+    </main>
+
+    
+    <%- include ../partials/bottom-nav.ejs %>
+   <%- include ../partials/footer.ejs %>
+
