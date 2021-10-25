@@ -11,7 +11,7 @@ let logger = require('morgan');
 let mongoose = require('mongoose');
 let DB = require('./db');
 
-mongoose.connect(DB.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(DB.RemoteURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'connection error..'));
